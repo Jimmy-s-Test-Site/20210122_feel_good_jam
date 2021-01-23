@@ -13,9 +13,21 @@ _global_script_classes=[ {
 "class": "Biome",
 "language": "GDScript",
 "path": "res://Julian/Fish/Biome.gd"
+}, {
+"base": "Resource",
+"class": "Inventory",
+"language": "GDScript",
+"path": "res://Abdullah Folder/Inventory.gd"
+}, {
+"base": "Resource",
+"class": "Item",
+"language": "GDScript",
+"path": "res://Abdullah Folder/Items/Item.gd"
 } ]
 _global_script_class_icons={
-"Biome": ""
+"Biome": "",
+"Inventory": "",
+"Item": ""
 }
 
 [application]

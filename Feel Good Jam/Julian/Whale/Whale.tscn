@@ -6,9 +6,16 @@
 
 [node name="Whale" type="KinematicBody2D"]
 script = ExtResource( 1 )
-frequency = 0.2
-init_altitude = 0.6
-amplitude = 4.0
+DEBUG_speed = 8.0
+outer_wave = {
+"amplitude": 0.1,
+"frequency": 0.5,
+"init_altitude": 0.75
+}
+inner_wave = {
+"amplitude": 0.031,
+"frequency": 0.125
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708

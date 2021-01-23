@@ -1,8 +1,9 @@
 [gd_resource type="Resource" load_steps=2 format=2]
 
-[ext_resource path="res://Julian/Fish/Biome.gd" type="Script" id=1]
+[ext_resource path="res://Julian/Biomes/Biome.gd" type="Script" id=1]
+
 
 [resource]
 script = ExtResource( 1 )
-name = "Biome2"
+name = ""
 fishes = [  ]

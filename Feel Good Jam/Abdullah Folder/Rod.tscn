@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Abdullah Folder/Rod.gd" type="Script" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 5.0
+height = 5.0
+
+[node name="Rod" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="String" type="Node2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="String"]
+position = Vector2( 0, 32 )
+scale = Vector2( 0.016, 1 )
+texture = ExtResource( 2 )
+
+[node name="HookContainer" type="Node2D" parent="."]
+position = Vector2( 0, 64 )
+
+[node name="Hook" type="Area2D" parent="HookContainer"]
+position = Vector2( 0, 7.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="HookContainer/Hook"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HookContainer/Hook"]
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HookContainer/Hook"]

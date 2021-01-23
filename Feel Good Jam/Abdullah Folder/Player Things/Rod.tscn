@@ -1,8 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Abdullah Folder/Hook.gd" type="Script" id=1]
+[ext_resource path="res://Abdullah Folder/Player Things/Hook.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://Abdullah Folder/Rod.gd" type="Script" id=3]
+[ext_resource path="res://Abdullah Folder/Player Things/Rod.gd" type="Script" id=3]
+
+
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 5.0

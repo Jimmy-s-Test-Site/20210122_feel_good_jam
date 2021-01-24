@@ -70,12 +70,14 @@ func play_at_speed(animation : String, speed : float) -> void:
 # engine defined functions
 
 func _ready() -> void:
-#	while true:
+	var barr = $InventoryContainer/CenterContainer/InventoryDisplay
+	for slot in barr.get_children():
+		slot.connect("bait_used", $BaitPrompt,"_on_BaitPrompt_bait_used")
+	#while true:
 #		yield(get_tree().create_timer(1), "timeout") 
 #		inventory.push_item(items_list.FISH_TYPES.Worm)
 	#$AnimationPlayer.playback_speed = 2
 	#$AnimationPlayer.play("Walking")
-	pass
 
 var isTrue = 99
 func _physics_process(delta : float) -> void:
@@ -84,7 +86,6 @@ func _physics_process(delta : float) -> void:
 	self.animation_manager()
 	while isTrue > 0:
 		add_item()
-		print("hey")
 		isTrue -= 1
 
 func add_item():

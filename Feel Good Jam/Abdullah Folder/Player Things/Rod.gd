@@ -5,6 +5,8 @@ signal harvest
 export (float) var reel_speed = 0.01
 export (Array) var limits = [0.2, 2]
 
+var fish = null
+
 var has_fish = false
 
 onready var string_sprite_height = $String/Sprite.texture.get_height()
@@ -30,9 +32,10 @@ func reel(direction): #direction should only be 0,1, or -1
 		$HookContainer.position = Vector2.DOWN * string_height
 		
 	if direction == -1 and self.position <= limits[0]:
-		emit_signal("harvest")
+		emit_signal("harvest", fish.type)
 		has_fish = false
 
 
-func _on_Hook_caught_fish():
+func _on_Hook_caught_fish(fish):
+	self.fish = fish
 	has_fish = true

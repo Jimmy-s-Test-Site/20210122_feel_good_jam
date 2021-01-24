@@ -5,6 +5,5 @@
 
 [resource]
 script = ExtResource( 1 )
-name = "Worms"
+type = 0
 texture = ExtResource( 2 )
-quantity = 999

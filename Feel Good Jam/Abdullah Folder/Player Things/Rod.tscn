@@ -4,8 +4,6 @@
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://Abdullah Folder/Player Things/Rod.gd" type="Script" id=3]
 
-
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 5.0
 height = 5.0
@@ -42,4 +40,5 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="HookContainer/Hook"]
+[connection signal="area_entered" from="HookContainer/Hook" to="HookContainer/Hook" method="_on_Hook_area_entered"]
 [connection signal="caught_fish" from="HookContainer/Hook" to="." method="_on_Hook_caught_fish"]

@@ -2,9 +2,52 @@ extends KinematicBody2D
 
 
 
+
+
+
+enum FISH_TYPES {
+	Worm,
+	FlyingFish,
+	ArrowFish,
+	TornadoShark,
+	JellyFishXP,
+	Nyan_CatFish,
+	PufferCloud,
+	Balloondapus,
+	Kite_A_Pus,
+	Birdapus,
+	Dronedapus,
+	UnidentifiedFlyingOctopus,
+}
+
+enum RARITY {
+	Worm,
+	Common,
+	Rare,
+	Legend
+}
+
+var item_resources = {
+	FISH_TYPES.Worm : "res://Abdullah Folder/Items/Worms.tres"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+export (Resource) var inventory
+
 export (Dictionary) var animations = {
 }
 
+const items_list = preload("res://Abdullah Folder/Items/Items.gd")
 
 onready var animation_player = $AnimationPlayer
 
@@ -27,14 +70,28 @@ func play_at_speed(animation : String, speed : float) -> void:
 # engine defined functions
 
 func _ready() -> void:
-	pass
+#	while true:
+#		yield(get_tree().create_timer(1), "timeout") 
+#		inventory.push_item(items_list.FISH_TYPES.Worm)
 	#$AnimationPlayer.playback_speed = 2
 	#$AnimationPlayer.play("Walking")
+	pass
 
+var isTrue = 99
 func _physics_process(delta : float) -> void:
 	self.input_manager()
 	self.movement_manager(delta)
 	self.animation_manager()
+	while isTrue > 0:
+		add_item()
+		print("hey")
+		isTrue -= 1
+
+func add_item():
+	#yield(get_tree().create_timer(1), "timeout") 
+	inventory.push_item(FISH_TYPES.Worm)
+
+
 
 # user defined functions
 
@@ -48,7 +105,6 @@ func input_manager() -> void:
 
 func movement_manager(delta : float) -> void:
 	self.velocity.x = self.input.facing_direction * 5000
-	print(velocity)
 	self.velocity.y = 0
 	#FI
 	self.velocity = self.move_and_slide(self.velocity)
@@ -56,3 +112,7 @@ func movement_manager(delta : float) -> void:
 
 func animation_manager() -> void:
 	pass
+
+
+func _on_Rod_harvest(fish_type):
+	inventory.push_item(fish_type)

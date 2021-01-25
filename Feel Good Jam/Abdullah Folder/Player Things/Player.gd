@@ -73,20 +73,16 @@ func _ready() -> void:
 	var barr = $InventoryContainer/CenterContainer/InventoryDisplay
 	for slot in barr.get_children():
 		slot.connect("bait_used", $BaitPrompt,"_on_BaitPrompt_bait_used")
-	#while true:
-#		yield(get_tree().create_timer(1), "timeout") 
-#		inventory.push_item(items_list.FISH_TYPES.Worm)
+	
+	$BaitPrompt.connect("bait_confirmed", $Rod/HookContainer/Hook, "set_bait_rarity")
 	#$AnimationPlayer.playback_speed = 2
 	#$AnimationPlayer.play("Walking")
 
-var isTrue = 99
+
 func _physics_process(delta : float) -> void:
 	self.input_manager()
 	self.movement_manager(delta)
 	self.animation_manager()
-	while isTrue > 0:
-		add_item()
-		isTrue -= 1
 
 func add_item():
 	#yield(get_tree().create_timer(1), "timeout") 

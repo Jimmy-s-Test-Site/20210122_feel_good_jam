@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Abdullah Folder/Items/Item.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = 1
+rarity = 1

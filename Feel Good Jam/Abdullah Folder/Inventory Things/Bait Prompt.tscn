@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://Abdullah Folder/Inventory Things/Bait Prompt.gd" type="Script" id=1]
-[ext_resource path="res://Abdullah Folder/Inventory Things/Inventory.tres" type="Resource" id=2]
 
 [node name="BaitPrompt" type="ColorRect"]
 anchor_left = 0.5
@@ -17,7 +16,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-inventory = ExtResource( 2 )
 
 [node name="Text" type="Label" parent="."]
 margin_left = 35.9594

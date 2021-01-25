@@ -6,4 +6,4 @@ var bait
 
 func _on_Hook_area_entered(area):
 	if area.name == "Mouth":
-		emit_signal("caught_fish", area.fish)
+		emit_signal("caught_fish", area.item)

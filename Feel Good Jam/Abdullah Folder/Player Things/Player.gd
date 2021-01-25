@@ -1,10 +1,5 @@
 extends KinematicBody2D
 
-
-
-
-
-
 enum FISH_TYPES {
 	Worm,
 	FlyingFish,
@@ -30,17 +25,6 @@ enum RARITY {
 var item_resources = {
 	FISH_TYPES.Worm : "res://Abdullah Folder/Items/Worms.tres"
 }
-
-
-
-
-
-
-
-
-
-
-
 
 export (Resource) var inventory
 

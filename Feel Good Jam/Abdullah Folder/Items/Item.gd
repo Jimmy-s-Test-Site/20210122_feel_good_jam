@@ -31,6 +31,7 @@ var item_resources = {
 
 export (FISH_TYPES) var type 
 export (Texture) var texture
+export (RARITY) var rarity
 
 var amount = 1
 

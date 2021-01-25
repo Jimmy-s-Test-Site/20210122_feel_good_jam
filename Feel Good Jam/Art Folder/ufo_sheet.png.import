@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/OG_Flying_Fish.png-6ad4af689e372f70a92dfac4126e3486.stex"
+path="res://.import/ufo_sheet.png-10f9b99d09dc5911dc92f327b07f00ec.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Folder/OG_Flying_Fish.png"
-dest_files=[ "res://.import/OG_Flying_Fish.png-6ad4af689e372f70a92dfac4126e3486.stex" ]
+source_file="res://Art Folder/ufo_sheet.png"
+dest_files=[ "res://.import/ufo_sheet.png-10f9b99d09dc5911dc92f327b07f00ec.stex" ]
 
 [params]
 

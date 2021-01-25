@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/OG_Flying_Fish.png-6ad4af689e372f70a92dfac4126e3486.stex"
+path="res://.import/Baloonapus_sheet.png-0c405b952f94fd3114897b49849b11e0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Folder/OG_Flying_Fish.png"
-dest_files=[ "res://.import/OG_Flying_Fish.png-6ad4af689e372f70a92dfac4126e3486.stex" ]
+source_file="res://Art Folder/Baloonapus_sheet.png"
+dest_files=[ "res://.import/Baloonapus_sheet.png-0c405b952f94fd3114897b49849b11e0.stex" ]
 
 [params]
 

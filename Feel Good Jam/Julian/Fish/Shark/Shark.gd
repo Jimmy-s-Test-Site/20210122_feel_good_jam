@@ -4,6 +4,8 @@ var direction
 
 export (Resource) var item
 
+export (float) var angle = PI/12
+
 func _ready():
 	randomize()
 	self.select_spawn_position()
@@ -17,7 +19,7 @@ func select_spawn_position():
 	var x = 0
 	var y = random_perimeter_point
 	
-	self.direction = fmod(randf() * PI/12 - PI/24, 2*PI)
+	self.direction = fmod(randf() * angle - angle/2, 2*PI)
 	
 	var facing_right = random_perimeter_point < self.viewport_size.y
 	

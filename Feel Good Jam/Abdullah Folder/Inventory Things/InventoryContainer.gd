@@ -9,3 +9,11 @@ func can_drop_data(_position, data):
 
 func drop_data(_position, data):
 	inventory.set_item(data.item_index, data.item)
+
+
+func _on_Player_inventory_open():
+	self.visible = true
+
+
+func _on_Player_inventory_close():
+	self.visible = false

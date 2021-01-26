@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+signal inventory_open
+signal inventory_close
+
 enum FISH_TYPES {
 	Worm,
 	FlyingFish,
@@ -31,6 +34,8 @@ export (Resource) var inventory
 export (Dictionary) var animations = {
 }
 
+export (int) var player_speed = 100
+
 const items_list = preload("res://Abdullah Folder/Items/Items.gd")
 
 onready var animation_player = $AnimationPlayer
@@ -45,6 +50,7 @@ var input = {
 	"hook_direction" : 0
 }
 
+var inventory_is_open = false
 # helper functions
 
 func play_at_speed(animation : String, speed : float) -> void:
@@ -85,10 +91,17 @@ func input_manager() -> void:
 
 
 func movement_manager(delta : float) -> void:
-	self.velocity.x = self.input.facing_direction * 5000
+	self.velocity.x = self.input.facing_direction * player_speed
 	self.velocity.y = 0
 	#FI
 	self.velocity = self.move_and_slide(self.velocity)
+	if self.input.inventory_toggle == true:
+		if inventory_is_open:
+			inventory_is_open= false
+			emit_signal("inventory_close")
+		else:
+			emit_signal("inventory_open")
+			inventory_is_open= true
 
 
 func animation_manager() -> void:

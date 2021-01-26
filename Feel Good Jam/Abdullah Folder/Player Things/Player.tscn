@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Abdullah Folder/Player Things/Player.gd" type="Script" id=1]
 [ext_resource path="res://Abdullah Folder/Player Things/Rod.tscn" type="PackedScene" id=2]
@@ -722,20 +722,55 @@ tracks/6/keys = {
 "values": [ true ]
 }
 
+[sub_resource type="AnimationNodeAnimation" id=25]
+animation = "CastingBack"
+
+[sub_resource type="AnimationNodeAnimation" id=26]
+animation = "CastingBack Left"
+
 [sub_resource type="AnimationNodeBlendSpace1D" id=10]
+blend_point_0/node = SubResource( 25 )
+blend_point_0/pos = 1.0
+blend_point_1/node = SubResource( 26 )
+blend_point_1/pos = -1.0
+
+[sub_resource type="AnimationNodeAnimation" id=27]
+animation = "CastingOut Left"
+
+[sub_resource type="AnimationNodeAnimation" id=28]
+animation = "CastingOut"
 
 [sub_resource type="AnimationNodeBlendSpace1D" id=11]
+blend_point_0/node = SubResource( 27 )
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource( 28 )
+blend_point_1/pos = 1.0
 
 [sub_resource type="AnimationNodeBlendSpace1D" id=12]
 
+[sub_resource type="AnimationNodeAnimation" id=29]
+animation = "Sitting"
+
+[sub_resource type="AnimationNodeAnimation" id=30]
+animation = "Sitting Left"
+
 [sub_resource type="AnimationNodeBlendSpace1D" id=13]
+blend_point_0/node = SubResource( 29 )
+blend_point_0/pos = 1.0
+blend_point_1/node = SubResource( 30 )
+blend_point_1/pos = -1.0
 
 [sub_resource type="AnimationNodeAnimation" id=14]
 animation = "Walking"
 
+[sub_resource type="AnimationNodeAnimation" id=31]
+animation = "Walking Left"
+
 [sub_resource type="AnimationNodeBlendSpace1D" id=15]
 blend_point_0/node = SubResource( 14 )
 blend_point_0/pos = 1.0
+blend_point_1/node = SubResource( 31 )
+blend_point_1/pos = -1.0
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=16]
 
@@ -768,7 +803,7 @@ states/Walking/position = Vector2( 336, 126 )
 transitions = [ "Idle", "Walking", SubResource( 16 ), "Walking", "Idle", SubResource( 17 ), "Idle", "Sitting", SubResource( 18 ), "Sitting", "Idle", SubResource( 19 ), "Idle", "Cast Out", SubResource( 20 ), "Cast Out", "Cast In", SubResource( 21 ), "Cast In", "Idle", SubResource( 22 ) ]
 start_node = "Idle"
 end_node = "Idle"
-graph_offset = Vector2( 0, 27.216 )
+graph_offset = Vector2( 0, 93.312 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=24]
 
@@ -780,12 +815,10 @@ inventory = ExtResource( 4 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -1.733, 1.824 )
+position = Vector2( 2.94646, 1.824 )
 texture = ExtResource( 3 )
-flip_h = true
 vframes = 2
 hframes = 3
-frame = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/CastingBack = SubResource( 2 )
@@ -803,10 +836,10 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 24 )
 "parameters/Cast In/blend_position" = 0
-"parameters/Cast Out/blend_position" = 0
+"parameters/Cast Out/blend_position" = 0.00145555
 parameters/Idle/blend_position = -0.00436682
-parameters/Sitting/blend_position = 0
-parameters/Walking/blend_position = 0
+parameters/Sitting/blend_position = 0.0
+parameters/Walking/blend_position = 0.0
 
 [node name="Rod" parent="." instance=ExtResource( 2 )]
 visible = false
@@ -821,4 +854,6 @@ margin_top = 115.997
 margin_right = 301.762
 margin_bottom = 160.997
 inventory = ExtResource( 4 )
+[connection signal="inventory_close" from="." to="InventoryContainer" method="_on_Player_inventory_close"]
+[connection signal="inventory_open" from="." to="InventoryContainer" method="_on_Player_inventory_open"]
 [connection signal="harvest" from="Rod" to="." method="_on_Rod_harvest"]

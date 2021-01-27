@@ -5,10 +5,12 @@ class_name Item
 enum FISH_TYPES {
 	Worm,
 	FlyingFish,
+	ForgetfulFish,
 	ArrowFish,
 	TornadoShark,
 	JellyFishXP,
 	Nyan_CatFish,
+	Anglerbird,
 	PufferCloud,
 	Balloondapus,
 	Kite_A_Pus,

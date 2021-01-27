@@ -25,6 +25,17 @@ enum RARITY {
 	Legend
 }
 
+enum STATES {
+	walk,
+	idle,
+	sit,
+	fishing
+}
+
+var state
+var can_sit
+
+
 var item_resources = {
 	FISH_TYPES.Worm : "res://Abdullah Folder/Items/Worms.tres"
 }
@@ -36,9 +47,13 @@ export (Dictionary) var animations = {
 
 export (int) var player_speed = 100
 
+export (float) var idle_time = 6
+
 const items_list = preload("res://Abdullah Folder/Items/Items.gd")
 
 onready var animation_player = $AnimationPlayer
+
+onready var state_machine = $AnimationTree.get("parameters/playback")
 
 var velocity := Vector2.ZERO
 
@@ -65,6 +80,8 @@ func _ready() -> void:
 		slot.connect("bait_used", $BaitPrompt,"_on_BaitPrompt_bait_used")
 	
 	$BaitPrompt.connect("bait_confirmed", $Rod/HookContainer/Hook, "set_bait_rarity")
+	$Idle_timer.start(self.idle_time)
+	state = STATES.idle
 	#$AnimationPlayer.playback_speed = 2
 	#$AnimationPlayer.play("Walking")
 
@@ -72,7 +89,9 @@ func _ready() -> void:
 func _physics_process(delta : float) -> void:
 	self.input_manager()
 	self.movement_manager(delta)
+	self.state_manager()
 	self.animation_manager()
+	
 
 func add_item():
 	#yield(get_tree().create_timer(1), "timeout") 
@@ -88,6 +107,9 @@ func input_manager() -> void:
 	self.input.sit_toggle = Input.is_action_just_pressed("sit_toggle")
 	self.input.facing_direction = int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))
 	self.input.hook_direction = int(Input.is_action_pressed("hook_up")) - int(Input.is_action_pressed("hook_down"))
+	
+	
+	
 
 
 func movement_manager(delta : float) -> void:
@@ -104,9 +126,45 @@ func movement_manager(delta : float) -> void:
 			inventory_is_open= true
 
 
+func state_manager():
+	if self.input.facing_direction != 0:
+		self.state = STATES.walk
+	elif self.input.cast_hook:
+		if self.state == STATES.fishing:
+			self.state == STATES.idle
+		else:
+			self.state = STATES.fishing
+	elif self.can_sit and self.state == STATES.idle:
+		self.state = STATES.sit
+		can_sit = false
+	elif self.state != STATES.fishing and self.state != STATES.sit:
+		self.state = STATES.idle
+		$Idle_timer.start(idle_time)
+
+
 func animation_manager() -> void:
-	pass
+	if input.facing_direction != 0:
+		
+		$AnimationTree.set('parameters/Walking/blend_position', input.facing_direction)
+		$AnimationTree.set('parameters/Idle/blend_position', input.facing_direction)
+		$AnimationTree.set('parameters/Sitting/blend_position', input.facing_direction)
+		$AnimationTree.set('parameters/Casting_in/blend_position', input.facing_direction)
+		$AnimationTree.set('parameters/Casting_out/blend_position', input.facing_direction)
+	match self.state:
+		STATES.idle:
+			state_machine.travel("Idle")
+		STATES.walk:
+			state_machine.travel("Walking")
+		STATES.fishing:
+			state_machine.travel("Fishing")
+		STATES.sit:
+			state_machine.travel("Sitting")
+
 
 
 func _on_Rod_harvest(fish_type):
 	inventory.push_item(fish_type)
+
+
+func _on_Idle_timer_timeout():
+	self.can_sit = true

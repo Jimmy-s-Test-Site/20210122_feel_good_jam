@@ -16,7 +16,7 @@ enum FISH_TYPES {
 	Kite_A_Pus,
 	Birdapus,
 	Dronedapus,
-	UnidentifiedFlyingOctopus,
+	UnidentifiedFlyingOctopus
 }
 
 enum RARITY {

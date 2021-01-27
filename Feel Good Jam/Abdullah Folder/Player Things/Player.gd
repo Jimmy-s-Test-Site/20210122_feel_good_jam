@@ -6,16 +6,18 @@ signal inventory_close
 enum FISH_TYPES {
 	Worm,
 	FlyingFish,
+	ForgetfulFish,
 	ArrowFish,
 	TornadoShark,
 	JellyFishXP,
 	Nyan_CatFish,
+	Anglerbird,
 	PufferCloud,
 	Balloondapus,
 	Kite_A_Pus,
 	Birdapus,
 	Dronedapus,
-	UnidentifiedFlyingOctopus,
+	UnidentifiedFlyingOctopus
 }
 
 enum RARITY {

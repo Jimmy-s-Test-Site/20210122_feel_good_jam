@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Abdullah Folder/Player Things/Player.gd" type="Script" id=1]
 [ext_resource path="res://Abdullah Folder/Player Things/Rod.tscn" type="PackedScene" id=2]
@@ -722,103 +722,116 @@ tracks/6/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=25]
+[sub_resource type="AnimationNodeAnimation" id=10]
 animation = "CastingBack"
 
-[sub_resource type="AnimationNodeAnimation" id=26]
+[sub_resource type="AnimationNodeAnimation" id=11]
 animation = "CastingBack Left"
 
-[sub_resource type="AnimationNodeBlendSpace1D" id=10]
-blend_point_0/node = SubResource( 25 )
+[sub_resource type="AnimationNodeBlendSpace1D" id=12]
+blend_point_0/node = SubResource( 10 )
 blend_point_0/pos = 1.0
-blend_point_1/node = SubResource( 26 )
+blend_point_1/node = SubResource( 11 )
 blend_point_1/pos = -1.0
 
-[sub_resource type="AnimationNodeAnimation" id=27]
+[sub_resource type="AnimationNodeAnimation" id=13]
 animation = "CastingOut Left"
 
-[sub_resource type="AnimationNodeAnimation" id=28]
+[sub_resource type="AnimationNodeAnimation" id=14]
 animation = "CastingOut"
 
-[sub_resource type="AnimationNodeBlendSpace1D" id=11]
-blend_point_0/node = SubResource( 27 )
+[sub_resource type="AnimationNodeBlendSpace1D" id=15]
+blend_point_0/node = SubResource( 13 )
 blend_point_0/pos = -1.0
-blend_point_1/node = SubResource( 28 )
+blend_point_1/node = SubResource( 14 )
 blend_point_1/pos = 1.0
 
-[sub_resource type="AnimationNodeBlendSpace1D" id=12]
+[sub_resource type="AnimationNodeBlendSpace1D" id=16]
 
-[sub_resource type="AnimationNodeAnimation" id=29]
+[sub_resource type="AnimationNodeBlendSpace1D" id=17]
+
+[sub_resource type="AnimationNodeAnimation" id=18]
 animation = "Sitting"
 
-[sub_resource type="AnimationNodeAnimation" id=30]
+[sub_resource type="AnimationNodeAnimation" id=19]
 animation = "Sitting Left"
 
-[sub_resource type="AnimationNodeBlendSpace1D" id=13]
-blend_point_0/node = SubResource( 29 )
+[sub_resource type="AnimationNodeBlendSpace1D" id=20]
+blend_point_0/node = SubResource( 18 )
 blend_point_0/pos = 1.0
-blend_point_1/node = SubResource( 30 )
+blend_point_1/node = SubResource( 19 )
 blend_point_1/pos = -1.0
 
-[sub_resource type="AnimationNodeAnimation" id=14]
+[sub_resource type="AnimationNodeAnimation" id=21]
 animation = "Walking"
 
-[sub_resource type="AnimationNodeAnimation" id=31]
+[sub_resource type="AnimationNodeAnimation" id=22]
 animation = "Walking Left"
 
-[sub_resource type="AnimationNodeBlendSpace1D" id=15]
-blend_point_0/node = SubResource( 14 )
+[sub_resource type="AnimationNodeBlendSpace1D" id=23]
+blend_point_0/node = SubResource( 21 )
 blend_point_0/pos = 1.0
-blend_point_1/node = SubResource( 31 )
+blend_point_1/node = SubResource( 22 )
 blend_point_1/pos = -1.0
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=18]
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=21]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+[sub_resource type="AnimationNodeStateMachineTransition" id=29]
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachine" id=23]
-"states/Cast In/node" = SubResource( 10 )
-"states/Cast In/position" = Vector2( 742, 425 )
-"states/Cast Out/node" = SubResource( 11 )
-"states/Cast Out/position" = Vector2( 529, 415 )
-states/Idle/node = SubResource( 12 )
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=32]
+"states/Cast In/node" = SubResource( 12 )
+"states/Cast In/position" = Vector2( 934, 427 )
+"states/Cast Out/node" = SubResource( 15 )
+"states/Cast Out/position" = Vector2( 331, 419 )
+states/Fishing/node = SubResource( 16 )
+states/Fishing/position = Vector2( 632, 427 )
+states/Idle/node = SubResource( 17 )
 states/Idle/position = Vector2( 649, 247 )
-states/Sitting/node = SubResource( 13 )
+states/Sitting/node = SubResource( 20 )
 states/Sitting/position = Vector2( 1044, 126 )
-states/Walking/node = SubResource( 15 )
+states/Walking/node = SubResource( 23 )
 states/Walking/position = Vector2( 336, 126 )
-transitions = [ "Idle", "Walking", SubResource( 16 ), "Walking", "Idle", SubResource( 17 ), "Idle", "Sitting", SubResource( 18 ), "Sitting", "Idle", SubResource( 19 ), "Idle", "Cast Out", SubResource( 20 ), "Cast Out", "Cast In", SubResource( 21 ), "Cast In", "Idle", SubResource( 22 ) ]
+transitions = [ "Idle", "Walking", SubResource( 24 ), "Walking", "Idle", SubResource( 25 ), "Idle", "Sitting", SubResource( 26 ), "Sitting", "Idle", SubResource( 27 ), "Idle", "Cast Out", SubResource( 28 ), "Cast In", "Idle", SubResource( 29 ), "Fishing", "Cast In", SubResource( 30 ), "Cast Out", "Fishing", SubResource( 31 ) ]
 start_node = "Idle"
 end_node = "Idle"
-graph_offset = Vector2( 0, 93.312 )
+graph_offset = Vector2( 0, 202.4 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=24]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=33]
 
 [node name="Player" type="KinematicBody2D"]
+position = Vector2( 309.311, 182.689 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 inventory = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 2.94646, 1.824 )
-texture = ExtResource( 3 )
-vframes = 2
-hframes = 3
+position = Vector2( 0, -1.684 )
+texture = ExtResource( 8 )
+flip_h = true
+vframes = 3
+hframes = 5
+frame = 7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/CastingBack = SubResource( 2 )
@@ -831,15 +844,16 @@ anims/Walking = SubResource( 8 )
 "anims/Walking Left" = SubResource( 9 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 23 )
+tree_root = SubResource( 32 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 24 )
+parameters/playback = SubResource( 33 )
 "parameters/Cast In/blend_position" = 0
-"parameters/Cast Out/blend_position" = 0.00145555
+"parameters/Cast Out/blend_position" = -0.00436682
+parameters/Fishing/blend_position = 0
 parameters/Idle/blend_position = -0.00436682
 parameters/Sitting/blend_position = 0.0
-parameters/Walking/blend_position = 0.0
+parameters/Walking/blend_position = -0.00291121
 
 [node name="Rod" parent="." instance=ExtResource( 2 )]
 visible = false
@@ -854,6 +868,9 @@ margin_top = 115.997
 margin_right = 301.762
 margin_bottom = 160.997
 inventory = ExtResource( 4 )
+
+[node name="Idle_timer" type="Timer" parent="."]
 [connection signal="inventory_close" from="." to="InventoryContainer" method="_on_Player_inventory_close"]
 [connection signal="inventory_open" from="." to="InventoryContainer" method="_on_Player_inventory_open"]
 [connection signal="harvest" from="Rod" to="." method="_on_Rod_harvest"]
+[connection signal="timeout" from="Idle_timer" to="." method="_on_Idle_timer_timeout"]

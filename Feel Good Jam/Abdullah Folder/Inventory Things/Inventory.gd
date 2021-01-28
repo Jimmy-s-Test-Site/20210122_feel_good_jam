@@ -129,3 +129,6 @@ func stack_item(index, num):
 	else:
 		items[index].amount += num
 	emit_signal("items_changed", [index])
+	if items[index].amount <= 0:
+		remove_item(index)
+	

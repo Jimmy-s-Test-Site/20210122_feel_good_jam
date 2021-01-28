@@ -49,7 +49,7 @@ export (Dictionary) var animations = {
 
 export (int) var player_speed = 100
 
-export (float) var idle_time = 6
+export (float) var idle_time = 10
 
 const items_list = preload("res://Abdullah Folder/Items/Items.gd")
 
@@ -130,16 +130,22 @@ func movement_manager(delta : float) -> void:
 
 func state_manager():
 	if self.input.facing_direction != 0:
+		$Idle_timer.stop()
 		self.state = STATES.walk
 	elif self.input.cast_hook:
+		$Idle_timer.stop()
 		if self.state == STATES.fishing:
-			self.state == STATES.idle
+			self.state = STATES.idle
 		else:
 			self.state = STATES.fishing
 	elif self.can_sit and self.state == STATES.idle:
 		self.state = STATES.sit
 		can_sit = false
-	elif self.state != STATES.fishing and self.state != STATES.sit:
+	elif (
+		self.state != STATES.fishing and 
+		self.state != STATES.sit and
+		self.state != STATES.idle
+	):
 		self.state = STATES.idle
 		$Idle_timer.start(idle_time)
 
@@ -169,4 +175,5 @@ func _on_Rod_harvest(fish_type):
 
 
 func _on_Idle_timer_timeout():
+#	print("bruuuuuuuuuuuuh")
 	self.can_sit = true

@@ -1,13 +1,15 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Abdullah Folder/Player Things/Player.gd" type="Script" id=1]
-[ext_resource path="res://Abdullah Folder/Player Things/Rod.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Abdullah Folder/Player Things/Rod.gd" type="Script" id=2]
 [ext_resource path="res://Art Folder/Samurai_WalkStyle.png" type="Texture" id=3]
 [ext_resource path="res://Abdullah Folder/Inventory Things/Inventory.tres" type="Resource" id=4]
 [ext_resource path="res://Abdullah Folder/Inventory Things/InventoryContainer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Abdullah Folder/Inventory Things/Bait Prompt.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Art Folder/Samurai_Sit.png" type="Texture" id=7]
 [ext_resource path="res://Art Folder/Samurai_CastingOut.png" type="Texture" id=8]
+[ext_resource path="res://icon.png" type="Texture" id=9]
+[ext_resource path="res://Abdullah Folder/Player Things/Hook.gd" type="Script" id=10]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 10.8616
@@ -101,6 +103,30 @@ tracks/6/keys = {
 "update": 1,
 "values": [ false ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("Rod:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Rod:light_mask")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 512 ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "CastingBack Left"
@@ -190,10 +216,33 @@ tracks/6/keys = {
 "update": 1,
 "values": [ true ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("Rod:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Rod:light_mask")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 512 ]
+}
 
 [sub_resource type="Animation" id=4]
 length = 1.2
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:scale")
 tracks/0/interp = 1
@@ -278,11 +327,46 @@ tracks/6/keys = {
 "update": 1,
 "values": [ false ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("Rod:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 1.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Rod/HookContainer/Hook:collision_layer")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 1.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Rod:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 1.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 54.647, -30.392 ) ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "CastingOut Left"
 length = 1.2
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:scale")
 tracks/0/interp = 1
@@ -363,6 +447,42 @@ tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
 "times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Rod/HookContainer/Hook:collision_layer")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 1.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Rod:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 1.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -51.755, -30.392 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Rod:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 1.1 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
@@ -746,7 +866,17 @@ blend_point_0/pos = -1.0
 blend_point_1/node = SubResource( 14 )
 blend_point_1/pos = 1.0
 
+[sub_resource type="AnimationNodeAnimation" id=35]
+animation = "Sitting"
+
+[sub_resource type="AnimationNodeAnimation" id=36]
+animation = "Sitting Left"
+
 [sub_resource type="AnimationNodeBlendSpace1D" id=16]
+blend_point_0/node = SubResource( 35 )
+blend_point_0/pos = 1.0
+blend_point_1/node = SubResource( 36 )
+blend_point_1/pos = -1.0
 
 [sub_resource type="AnimationNodeBlendSpace1D" id=17]
 
@@ -814,13 +944,15 @@ graph_offset = Vector2( 0, 202.4 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=33]
 
+[sub_resource type="CapsuleShape2D" id=34]
+radius = 5.0
+height = 5.0
+
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 309.311, 182.689 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 inventory = ExtResource( 4 )
+idle_time = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -828,10 +960,9 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -1.684 )
 texture = ExtResource( 8 )
-flip_h = true
 vframes = 3
 hframes = 5
-frame = 7
+frame = 12
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/CastingBack = SubResource( 2 )
@@ -855,8 +986,40 @@ parameters/Idle/blend_position = -0.00436682
 parameters/Sitting/blend_position = 0.0
 parameters/Walking/blend_position = -0.00291121
 
-[node name="Rod" parent="." instance=ExtResource( 2 )]
-visible = false
+[node name="Rod" type="Node2D" parent="."]
+light_mask = 512
+position = Vector2( 54.647, -30.392 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Rod"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Rod"]
+
+[node name="String" type="Node2D" parent="Rod"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Rod/String"]
+position = Vector2( 0, 32 )
+scale = Vector2( 0.016, 1 )
+texture = ExtResource( 9 )
+
+[node name="HookContainer" type="Node2D" parent="Rod"]
+position = Vector2( 0, 64 )
+
+[node name="Hook" type="Area2D" parent="Rod/HookContainer"]
+position = Vector2( 0, 7.5 )
+script = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="Rod/HookContainer/Hook"]
+scale = Vector2( 0.149, 0.221 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rod/HookContainer/Hook"]
+shape = SubResource( 34 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Rod/HookContainer/Hook"]
 
 [node name="InventoryContainer" parent="." instance=ExtResource( 5 )]
 visible = false
@@ -873,4 +1036,6 @@ inventory = ExtResource( 4 )
 [connection signal="inventory_close" from="." to="InventoryContainer" method="_on_Player_inventory_close"]
 [connection signal="inventory_open" from="." to="InventoryContainer" method="_on_Player_inventory_open"]
 [connection signal="harvest" from="Rod" to="." method="_on_Rod_harvest"]
+[connection signal="area_entered" from="Rod/HookContainer/Hook" to="Rod/HookContainer/Hook" method="_on_Hook_area_entered"]
+[connection signal="caught_fish" from="Rod/HookContainer/Hook" to="Rod" method="_on_Hook_caught_fish"]
 [connection signal="timeout" from="Idle_timer" to="." method="_on_Idle_timer_timeout"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Julian/Scenes/Game/Game.gd" type="Script" id=1]
 [ext_resource path="res://Julian/Biomes/Biome1.tres" type="Resource" id=2]
+[ext_resource path="res://Julian/Whale/Whale.tscn" type="PackedScene" id=3]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
@@ -10,7 +11,19 @@ biomes = [ ExtResource( 2 ) ]
 init_biome = ExtResource( 2 )
 fish_spawn_time = 1.0
 
+[node name="Whale" parent="." instance=ExtResource( 3 )]
+outer_wave = {
+"amplitude": 0.1,
+"frequency": 0.167,
+"init_altitude": 0.6
+}
+inner_wave = {
+"amplitude": 0.125,
+"frequency": 0.031
+}
+
 [node name="FishContainer" type="Node2D" parent="."]
+z_index = 3
 
 [node name="FishSpawnTimer" type="Timer" parent="."]
 [connection signal="timeout" from="FishSpawnTimer" to="." method="_on_FishSpawnTimer_timeout"]

@@ -1400,8 +1400,11 @@ radius = 3.67731
 height = 5.0
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 309.311, 182.689 )
+position = Vector2( 287.835, 120.19 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 inventory = ExtResource( 4 )
 idle_time = 2.0
 
@@ -1411,6 +1414,7 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -1.684 )
 texture = ExtResource( 12 )
+flip_h = true
 vframes = 5
 hframes = 5
 
@@ -1493,6 +1497,7 @@ inventory = ExtResource( 4 )
 [node name="Idle_timer" type="Timer" parent="."]
 [connection signal="inventory_close" from="." to="InventoryContainer" method="_on_Player_inventory_close"]
 [connection signal="inventory_open" from="." to="InventoryContainer" method="_on_Player_inventory_open"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="harvest" from="Rod" to="." method="_on_Rod_harvest"]
 [connection signal="area_entered" from="Rod/HookContainer/Hook" to="Rod/HookContainer/Hook" method="_on_Hook_area_entered"]
 [connection signal="caught_fish" from="Rod/HookContainer/Hook" to="Rod" method="_on_Hook_caught_fish"]

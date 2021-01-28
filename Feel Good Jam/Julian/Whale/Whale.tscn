@@ -1,11 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Julian/Whale/Whale.gd" type="Script" id=1]
 [ext_resource path="res://Art Folder/whale_concept.png" type="Texture" id=2]
 [ext_resource path="res://Abdullah Folder/Player Things/Player.tscn" type="PackedScene" id=3]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 13, 199 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 38, 10 )
@@ -37,11 +34,6 @@ region_enabled = true
 region_rect = Rect2( 0, 445, 398, 32 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1, -110 )
-rotation = 1.5708
-shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( 197, -138 )

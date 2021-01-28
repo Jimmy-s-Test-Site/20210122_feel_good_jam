@@ -24,7 +24,7 @@ tracks/0/keys = {
 [sub_resource type="CircleShape2D" id=2]
 
 [node name="FlyingFish" type="Area2D"]
-scale = Vector2( 2, 2 )
+scale = Vector2( 0.8, 0.8 )
 script = ExtResource( 1 )
 item = ExtResource( 3 )
 y_min = 0.5

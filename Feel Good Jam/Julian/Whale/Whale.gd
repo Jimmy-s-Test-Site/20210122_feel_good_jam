@@ -16,7 +16,10 @@ export (Dictionary) var inner_wave = {
 }
 
 func _ready():
-	self.position = Vector2(0, self.outer_wave.init_altitude * get_viewport().get_size().y)
+	self.position = Vector2(
+		self.get_viewport().get_size().x/2,
+		self.outer_wave.init_altitude * self.get_viewport().get_size().y
+	)
 
 func _physics_process(delta):
 	self.total_time += delta
@@ -34,7 +37,5 @@ func _physics_process(delta):
 	var inner = a * cos(f * x) * f
 	
 	var velocity = Vector2(0, outer + inner)
-	
-	print(velocity.y)
 	
 	self.move_and_slide(velocity)

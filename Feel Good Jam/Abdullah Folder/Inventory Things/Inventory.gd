@@ -16,16 +16,18 @@ signal items_changed (indexes)
 enum FISH_TYPES {
 	Worm,
 	FlyingFish,
+	ForgetfulFish,
 	ArrowFish,
 	TornadoShark,
 	JellyFishXP,
 	Nyan_CatFish,
+	Anglerbird,
 	PufferCloud,
 	Balloondapus,
 	Kite_A_Pus,
 	Birdapus,
 	Dronedapus,
-	UnidentifiedFlyingOctopus,
+	UnidentifiedFlyingOctopus
 }
 
 enum RARITY {
@@ -127,3 +129,6 @@ func stack_item(index, num):
 	else:
 		items[index].amount += num
 	emit_signal("items_changed", [index])
+	if items[index].amount <= 0:
+		remove_item(index)
+	

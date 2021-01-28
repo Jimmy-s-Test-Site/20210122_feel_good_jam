@@ -6,16 +6,18 @@ signal inventory_close
 enum FISH_TYPES {
 	Worm,
 	FlyingFish,
+	ForgetfulFish,
 	ArrowFish,
 	TornadoShark,
 	JellyFishXP,
 	Nyan_CatFish,
+	Anglerbird,
 	PufferCloud,
 	Balloondapus,
 	Kite_A_Pus,
 	Birdapus,
 	Dronedapus,
-	UnidentifiedFlyingOctopus,
+	UnidentifiedFlyingOctopus
 }
 
 enum RARITY {
@@ -47,7 +49,7 @@ export (Dictionary) var animations = {
 
 export (int) var player_speed = 100
 
-export (float) var idle_time = 6
+export (float) var idle_time = 25
 
 const items_list = preload("res://Abdullah Folder/Items/Items.gd")
 
@@ -128,28 +130,38 @@ func movement_manager(delta : float) -> void:
 
 func state_manager():
 	if self.input.facing_direction != 0:
+		$Idle_timer.stop()
+		self.can_sit =false
 		self.state = STATES.walk
 	elif self.input.cast_hook:
+		$Idle_timer.stop()
+		self.can_sit =false
 		if self.state == STATES.fishing:
-			self.state == STATES.idle
+			self.state = STATES.idle
 		else:
 			self.state = STATES.fishing
 	elif self.can_sit and self.state == STATES.idle:
 		self.state = STATES.sit
 		can_sit = false
-	elif self.state != STATES.fishing and self.state != STATES.sit:
+	elif (
+		self.state != STATES.fishing and 
+		self.state != STATES.sit and
+		self.state != STATES.idle
+	):
 		self.state = STATES.idle
 		$Idle_timer.start(idle_time)
 
 
 func animation_manager() -> void:
 	if input.facing_direction != 0:
+		print(input.facing_direction)
 		
 		$AnimationTree.set('parameters/Walking/blend_position', input.facing_direction)
+		$AnimationTree.set('parameters/Fishing/blend_position', input.facing_direction)
 		$AnimationTree.set('parameters/Idle/blend_position', input.facing_direction)
 		$AnimationTree.set('parameters/Sitting/blend_position', input.facing_direction)
-		$AnimationTree.set('parameters/Casting_in/blend_position', input.facing_direction)
-		$AnimationTree.set('parameters/Casting_out/blend_position', input.facing_direction)
+		$AnimationTree.set('parameters/Cast In/blend_position', input.facing_direction)
+		$AnimationTree.set('parameters/Cast Out/blend_position', input.facing_direction)
 	match self.state:
 		STATES.idle:
 			state_machine.travel("Idle")
@@ -167,4 +179,5 @@ func _on_Rod_harvest(fish_type):
 
 
 func _on_Idle_timer_timeout():
+#	print("bruuuuuuuuuuuuh")
 	self.can_sit = true

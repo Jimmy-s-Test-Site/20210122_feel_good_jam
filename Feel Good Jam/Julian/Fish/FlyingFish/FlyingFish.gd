@@ -28,15 +28,13 @@ func select_spawn_position():
 		y = (random_perimeter_point) + (self.y_min * self.viewport_size.y)
 		
 		self.direction = 0
-		
-		scale.y = abs(scale.y)
+		self.scale.y = abs(scale.y)
 	else:
 		x = self.viewport_size.x
 		y = (random_perimeter_point - side_length) + (self.y_min * self.viewport_size.y)
 		
 		self.direction = PI
-		
-		scale.y = -abs(scale.y)
+		self.scale.y = -abs(scale.y)
 	
 	self.global_position = Vector2(x, y)
 	

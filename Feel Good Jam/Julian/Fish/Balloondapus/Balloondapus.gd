@@ -9,7 +9,6 @@ export (float) var angle = PI/12
 func _ready():
 	randomize()
 	self.select_spawn_position()
-	#self.rotation = self.direction
 	$AnimationPlayer.play("move")
 
 func select_spawn_position():

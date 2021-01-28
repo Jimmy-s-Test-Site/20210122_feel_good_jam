@@ -25,7 +25,7 @@ __meta__ = {
 [node name="InventoryDisplay" parent="CenterContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 288.0
-margin_top = 172.0
-margin_right = 736.0
-margin_bottom = 428.0
+margin_left = 416.0
+margin_top = 232.0
+margin_right = 864.0
+margin_bottom = 488.0

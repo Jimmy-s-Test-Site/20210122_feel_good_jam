@@ -11,7 +11,6 @@ export (float) var steer_speed = 1
 func _ready():
 	randomize()
 	self.select_spawn_position()
-	#self.rotation = self.direction
 	$AnimationPlayer.play("move")
 
 func select_spawn_position():
@@ -41,8 +40,6 @@ func movement_manager(delta):
 	var f = self.steer_speed
 	var x = self.total_time
 	self.direction = a * cos(f * x) * f
-	
-	print(direction)
 	
 	var movement = (Vector2.UP * self.speed).rotated(-direction)
 	

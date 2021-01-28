@@ -49,7 +49,7 @@ export (Dictionary) var animations = {
 
 export (int) var player_speed = 100
 
-export (float) var idle_time = 10
+export (float) var idle_time = 25
 
 const items_list = preload("res://Abdullah Folder/Items/Items.gd")
 
@@ -131,9 +131,11 @@ func movement_manager(delta : float) -> void:
 func state_manager():
 	if self.input.facing_direction != 0:
 		$Idle_timer.stop()
+		self.can_sit =false
 		self.state = STATES.walk
 	elif self.input.cast_hook:
 		$Idle_timer.stop()
+		self.can_sit =false
 		if self.state == STATES.fishing:
 			self.state = STATES.idle
 		else:
@@ -152,12 +154,14 @@ func state_manager():
 
 func animation_manager() -> void:
 	if input.facing_direction != 0:
+		print(input.facing_direction)
 		
 		$AnimationTree.set('parameters/Walking/blend_position', input.facing_direction)
+		$AnimationTree.set('parameters/Fishing/blend_position', input.facing_direction)
 		$AnimationTree.set('parameters/Idle/blend_position', input.facing_direction)
 		$AnimationTree.set('parameters/Sitting/blend_position', input.facing_direction)
-		$AnimationTree.set('parameters/Casting_in/blend_position', input.facing_direction)
-		$AnimationTree.set('parameters/Casting_out/blend_position', input.facing_direction)
+		$AnimationTree.set('parameters/Cast In/blend_position', input.facing_direction)
+		$AnimationTree.set('parameters/Cast Out/blend_position', input.facing_direction)
 	match self.state:
 		STATES.idle:
 			state_machine.travel("Idle")

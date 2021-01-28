@@ -39,7 +39,9 @@ _global_script_class_icons={
 [application]
 
 config/name="Feel Good Jam"
-config/icon="res://icon.png"
+run/main_scene="res://Julian/Scenes/Game/Game.tscn"
+config/icon="res://Marketing/icon_v1.png"
+config/windows_native_icon="res://Marketing/icon_v1.ico"
 
 [display]
 

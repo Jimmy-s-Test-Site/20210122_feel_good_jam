@@ -12,7 +12,7 @@ signal caught_fish
 var rarity_type
 
 func _on_Hook_area_entered(area):
-	if area.name == "Mouth":
+	if area.name.find("Fish", 0) != -1:
 		emit_signal("caught_fish", area.item)
 
 func set_bait_rarity(rarity):

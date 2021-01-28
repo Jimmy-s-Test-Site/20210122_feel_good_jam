@@ -24,7 +24,7 @@ tracks/0/keys = {
 [sub_resource type="CircleShape2D" id=2]
 radius = 9.0
 
-[node name="Shark" type="Area2D"]
+[node name="SharkFish" type="Area2D"]
 scale = Vector2( 2, 2 )
 script = ExtResource( 1 )
 item = ExtResource( 3 )

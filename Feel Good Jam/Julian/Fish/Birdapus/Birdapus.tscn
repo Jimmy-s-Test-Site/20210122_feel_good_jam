@@ -23,7 +23,7 @@ tracks/0/keys = {
 [sub_resource type="CircleShape2D" id=2]
 radius = 7.44944
 
-[node name="Birdapus" type="Area2D"]
+[node name="BirdapusFish" type="Area2D"]
 scale = Vector2( 2, 2 )
 script = ExtResource( 1 )
 

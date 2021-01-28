@@ -23,7 +23,7 @@ tracks/0/keys = {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 12.5, 7.14722 )
 
-[node name="Balloondapus" type="Area2D"]
+[node name="BalloondapusFish" type="Area2D"]
 scale = Vector2( 2, 2 )
 script = ExtResource( 1 )
 

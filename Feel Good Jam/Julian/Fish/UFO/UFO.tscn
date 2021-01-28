@@ -23,7 +23,7 @@ tracks/0/keys = {
 [sub_resource type="CapsuleShape2D" id=2]
 height = 7.0
 
-[node name="UFO" type="Area2D"]
+[node name="UFOFish" type="Area2D"]
 scale = Vector2( 2, 2 )
 script = ExtResource( 1 )
 speed = 200

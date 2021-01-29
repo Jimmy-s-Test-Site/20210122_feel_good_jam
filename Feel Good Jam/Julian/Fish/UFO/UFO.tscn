@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Julian/Fish/UFO/UFO.gd" type="Script" id=1]
 [ext_resource path="res://Art Folder/ufo_sheet.png" type="Texture" id=2]
+[ext_resource path="res://Abdullah Folder/Items/UFOctupus.tres" type="Resource" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "move"
@@ -27,6 +28,7 @@ height = 7.0
 scale = Vector2( 2, 2 )
 script = ExtResource( 1 )
 speed = 200
+item = ExtResource( 3 )
 amplitude = 0.393
 steer_speed = 3.0
 

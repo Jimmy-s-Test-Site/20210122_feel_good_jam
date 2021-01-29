@@ -38,7 +38,19 @@ enum RARITY {
 }
 
 var item_resources = {
-	FISH_TYPES.Worm : "res://Abdullah Folder/Items/Worms.tres"
+	FISH_TYPES.Worm : "res://Abdullah Folder/Items/Worms.tres" ,
+	FISH_TYPES.FlyingFish: "res://Abdullah Folder/Items/FlyingFish.tres",
+	FISH_TYPES.ForgetfulFish:"res://Abdullah Folder/Items/ForgetfulFish.tres",
+	FISH_TYPES.TornadoShark:"res://Abdullah Folder/Items/Shark.tres",
+	FISH_TYPES.JellyFishXP: "res://Abdullah Folder/Items/Jellyfish_XP.tres",
+	FISH_TYPES.Nyan_CatFish:"res://Abdullah Folder/Items/Worms.tres", #fix later
+	FISH_TYPES.Anglerbird:"res://Abdullah Folder/Items/Anglerbird.tres",
+	FISH_TYPES.PufferCloud:"res://Abdullah Folder/Items/Puffercloud.tres",
+	FISH_TYPES.Balloondapus:"res://Abdullah Folder/Items/Balloonapus.tres",
+	FISH_TYPES.Kite_A_Pus:"res://Abdullah Folder/Items/Worms.tres", #fix later
+	FISH_TYPES.Birdapus:"res://Abdullah Folder/Items/Birdapus.tres",
+	FISH_TYPES.Dronedapus:"res://Abdullah Folder/Items/Dronedapus.tres",
+	FISH_TYPES.UnidentifiedFlyingOctopus:"res://Abdullah Folder/Items/UFOctupus.tres"
 }
 
 
@@ -107,8 +119,7 @@ func find_first_open(): #finds first open index
 	for inventory_index in range(self.items.size()):
 		if self.items[inventory_index] == null:
 			return inventory_index
-		else:
-			return -1
+	return -1
 
 func push_item(fish_type):
 	var found = find_type(fish_type)

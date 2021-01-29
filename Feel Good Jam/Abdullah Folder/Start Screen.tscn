@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Abdullah Folder/Start Screen.gd" type="Script" id=1]
+[ext_resource path="res://Art Folder/Start Scree.png" type="Texture" id=2]
+
+[node name="Start Screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Button" type="Button" parent="."]
+margin_left = 954.184
+margin_top = 513.989
+margin_right = 1219.18
+margin_bottom = 567.989
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

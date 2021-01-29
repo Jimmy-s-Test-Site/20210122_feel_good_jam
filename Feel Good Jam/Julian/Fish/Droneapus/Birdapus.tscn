@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Julian/Fish/Birdapus/Birdapus.gd" type="Script" id=1]
 [ext_resource path="res://Art Folder/Birdapus_sheet.png" type="Texture" id=2]
+[ext_resource path="res://Abdullah Folder/Items/Dronedapus.tres" type="Resource" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "move"
@@ -26,6 +27,7 @@ radius = 7.44944
 [node name="BirdapusFish" type="Area2D"]
 scale = Vector2( 2, 2 )
 script = ExtResource( 1 )
+item = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -1, -4 )

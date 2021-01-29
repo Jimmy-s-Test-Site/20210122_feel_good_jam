@@ -24,19 +24,23 @@ func reel(direction): #direction should only be 0,1, or -1
 	if direction == 0:
 		return
 	
-	print ($String.scale.y)
-	print (limits)
+#	print ($String.scale.y)
+#	 (limits)
 	var within_limits = $String.scale.y >= limits[0] and $String.scale.y <= limits[1]
 	
 	
 	if within_limits:
-		print(within_limits)
+		#print(within_limits)
 		$String.scale.y += reel_speed * direction
 		$String.scale.y = clamp($String.scale.y, limits[0], limits[1])
 		string_height = string_sprite_height * $String/Sprite.scale * $String.scale
 		$HookContainer.position = Vector2.DOWN * string_height
 		
-	if direction == -1 and $String.scale.y <= limits[0]:
+	if (
+		direction == -1 and 
+		$String.scale.y <= limits[0] + .01 and
+		has_fish
+	):
 		if item is Item:
 			emit_signal("harvest", item.type)
 			has_fish = false

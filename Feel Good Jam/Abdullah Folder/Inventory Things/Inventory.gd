@@ -129,6 +129,7 @@ func push_item(fish_type):
 		var free_space = find_first_open()
 		if free_space >= 0:
 			#var new_item = Items.items[fish_type]
+			print(fish_type)
 			var new_item = load(item_resources[fish_type])
 			set_item(free_space, new_item)
 		else:

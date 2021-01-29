@@ -9,6 +9,6 @@ region = Rect2( 0, 46, 64, 64 )
 
 [resource]
 script = ExtResource( 1 )
-type = 6
+type = 7
 texture = SubResource( 1 )
 rarity = 3

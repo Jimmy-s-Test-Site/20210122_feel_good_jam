@@ -14,11 +14,11 @@ onready var curr_biome = self.init_biome
 var curr_background_index = 0
 
 func _ready():
-	$FishSpawnTimer.start(self.fish_spawn_time)
-
-	$TextureRect.texture = self.backgrounds[curr_background_index]
-
-	$BackgroundChangeTimer.start(self.background_change_time)
+#	$FishSpawnTimer.start(self.fish_spawn_time)
+#
+#	$TextureRect.texture = self.backgrounds[curr_background_index]
+#
+#	$BackgroundChangeTimer.start(self.background_change_time)
 	pass
 
 func spawn_fish():
@@ -60,3 +60,4 @@ func _on_Start_Screen_start_the_game():
 	$TextureRect.texture = self.backgrounds[curr_background_index]
 	
 	$BackgroundChangeTimer.start(self.background_change_time)
+	$Whale/Player/Camera2D.current = true

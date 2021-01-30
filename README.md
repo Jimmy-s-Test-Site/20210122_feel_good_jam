@@ -31,3 +31,5 @@ Art by Gerald Sunsetmoth & Jay
 Coding by Abdullah & Julian
 
 ## Concept Art
+
+![Skyfish Sketches 1](Feel Good Jam/Marketing/skyfish_sketches_1.png)

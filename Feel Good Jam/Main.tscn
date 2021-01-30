@@ -11,4 +11,6 @@ anchor_bottom = 1.0
 visible = false
 
 [node name="Start Screen" parent="." instance=ExtResource( 2 )]
+margin_left = -8.0
+margin_top = -5.0
 [connection signal="start_the_game" from="Start Screen" to="Game" method="_on_Start_Screen_start_the_game"]

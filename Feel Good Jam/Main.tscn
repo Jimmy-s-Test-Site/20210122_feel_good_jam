@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Julian/Scenes/Game/Game.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Abdullah Folder/Start Screen.tscn" type="PackedScene" id=2]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Game" parent="." instance=ExtResource( 1 )]
+visible = false
+
+[node name="Start Screen" parent="." instance=ExtResource( 2 )]
+[connection signal="start_the_game" from="Start Screen" to="Game" method="_on_Start_Screen_start_the_game"]

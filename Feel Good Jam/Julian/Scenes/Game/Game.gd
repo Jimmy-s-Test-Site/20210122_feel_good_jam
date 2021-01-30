@@ -13,11 +13,12 @@ onready var curr_biome = self.init_biome
 var curr_background_index = 0
 
 func _ready():
-	$FishSpawnTimer.start(self.fish_spawn_time)
-	
-	$TextureRect.texture = self.backgrounds[curr_background_index]
-	
-	$BackgroundChangeTimer.start(self.background_change_time)
+#	$FishSpawnTimer.start(self.fish_spawn_time)
+#
+#	$TextureRect.texture = self.backgrounds[curr_background_index]
+#
+#	$BackgroundChangeTimer.start(self.background_change_time)
+	pass
 
 func spawn_fish():
 	var curr_biome_exists = self.curr_biome != null
@@ -47,3 +48,13 @@ func _on_BackgroundChangeTimer_timeout():
 
 func _on_AudioStreamPlayer_finished():
 	$AudioStreamPlayer.play()
+
+
+
+func _on_Start_Screen_start_the_game():
+	self.visible = true
+	$FishSpawnTimer.start(self.fish_spawn_time)
+	
+	$TextureRect.texture = self.backgrounds[curr_background_index]
+	
+	$BackgroundChangeTimer.start(self.background_change_time)

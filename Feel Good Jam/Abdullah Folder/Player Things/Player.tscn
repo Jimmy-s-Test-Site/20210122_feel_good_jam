@@ -2,17 +2,18 @@
 
 [ext_resource path="res://Abdullah Folder/Player Things/Player.gd" type="Script" id=1]
 [ext_resource path="res://Abdullah Folder/Player Things/Rod.gd" type="Script" id=2]
-[ext_resource path="res://Art Folder/Samurai_WalkStyle.png" type="Texture" id=3]
+[ext_resource path="res://Art Folder/Sprites/Samurai_WalkStyle.png" type="Texture" id=3]
 [ext_resource path="res://Abdullah Folder/Inventory Things/Inventory.tres" type="Resource" id=4]
 [ext_resource path="res://Abdullah Folder/Inventory Things/InventoryContainer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Abdullah Folder/Inventory Things/Bait Prompt.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Art Folder/Samurai_Sit.png" type="Texture" id=7]
-[ext_resource path="res://Art Folder/Samurai_CastingOut.png" type="Texture" id=8]
-[ext_resource path="res://Art Folder/Line.png" type="Texture" id=9]
+[ext_resource path="res://Art Folder/Sprites/Samurai_Sit.png" type="Texture" id=7]
+[ext_resource path="res://Art Folder/Sprites/Samurai_CastingOut.png" type="Texture" id=8]
+[ext_resource path="res://Art Folder/Sprites/Line.png" type="Texture" id=9]
 [ext_resource path="res://Abdullah Folder/Player Things/Hook.gd" type="Script" id=10]
-[ext_resource path="res://Art Folder/Hook_Blank.png" type="Texture" id=11]
-[ext_resource path="res://Art Folder/Samurai_CastingOutNew.png" type="Texture" id=12]
-[ext_resource path="res://Art Folder/Samurai_Idle.png" type="Texture" id=13]
+[ext_resource path="res://Art Folder/Sprites/Hook_Blank.png" type="Texture" id=11]
+[ext_resource path="res://Art Folder/Sprites/Samurai_CastingOutNew.png" type="Texture" id=12]
+[ext_resource path="res://Art Folder/Sprites/Samurai_Idle.png" type="Texture" id=13]
+
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 10.8616

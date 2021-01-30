@@ -1,8 +1,9 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Julian/Fish/FlyingFish/FlyingFish.gd" type="Script" id=1]
-[ext_resource path="res://Art Folder/OG_Flying_Fish.png" type="Texture" id=2]
+[ext_resource path="res://Art Folder/Sprites/OG_Flying_Fish.png" type="Texture" id=2]
 [ext_resource path="res://Abdullah Folder/Items/FlyingFish.tres" type="Resource" id=3]
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "move"

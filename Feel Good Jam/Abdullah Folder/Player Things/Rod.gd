@@ -3,7 +3,7 @@ extends Node2D
 signal harvest
 
 export (float) var reel_speed = 0.03
-export (Array) var limits = [0.1, 5]
+export (Array) var limits = [0.1, 5.0]
 
 var item = null
 

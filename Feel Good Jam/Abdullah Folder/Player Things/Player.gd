@@ -43,13 +43,14 @@ var item_resources = {
 }
 
 export (Resource) var inventory
-
-export (Dictionary) var animations = {
-}
-
+export (Dictionary) var animations = {}
 export (int) var player_speed = 100
-
 export (float) var idle_time = 25
+export (float) var zoom_speed
+export (float) var zoom_min
+export (float) var zoom_max
+
+var ready = false
 
 const items_list = preload("res://Abdullah Folder/Items/Items.gd")
 
@@ -83,6 +84,7 @@ func _ready() -> void:
 	
 	$BaitPrompt.connect("bait_confirmed", $Rod/HookContainer/Hook, "set_bait_rarity")
 	$Idle_timer.start(self.idle_time)
+	#$Camera2D.zoom = Vector2.ONE * self.zoom_max
 	state = STATES.idle
 	#$AnimationPlayer.playback_speed = 2
 	#$AnimationPlayer.play("Walking")
@@ -103,16 +105,29 @@ func add_item():
 
 # user defined functions
 
+func _input(event):
+	var zoom_in = event.is_action_pressed("zoom_in")
+	var zoom_out = event.is_action_pressed("zoom_out")
+	var zoom = int(zoom_out) - int(zoom_in)
+	
+	if zoom != 0:
+		$Camera2D.zoom += Vector2.ONE * zoom * self.zoom_speed
+		var min_zoom_vector = Vector2.ONE * self.zoom_min
+		var max_zoom_vector = Vector2.ONE * self.zoom_max
+		
+		if $Camera2D.zoom.length() < min_zoom_vector.length():
+			$Camera2D.zoom = min_zoom_vector
+		elif $Camera2D.zoom.length() > max_zoom_vector.length():
+			$Camera2D.zoom = max_zoom_vector
+		
+		print($Camera2D.zoom)
+
 func input_manager() -> void:
 	self.input.cast_hook   = Input.is_action_just_pressed("cast_hook")
 	self.input.inventory_toggle = Input.is_action_just_pressed("inventory_toggle")
 	self.input.sit_toggle = Input.is_action_just_pressed("sit_toggle")
 	self.input.facing_direction = int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))
 	self.input.hook_direction = int(Input.is_action_pressed("hook_up")) - int(Input.is_action_pressed("hook_down"))
-	
-	
-	
-
 
 func movement_manager(delta : float) -> void:
 	self.velocity.x = self.input.facing_direction * player_speed

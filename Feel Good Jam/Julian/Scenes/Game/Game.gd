@@ -38,4 +38,12 @@ func _on_FishSpawnTimer_timeout():
 func _on_BackgroundChangeTimer_timeout():
 	self.curr_background_index = (self.curr_background_index + 1) % self.backgrounds.size()
 	$TextureRect.texture = self.backgrounds[self.curr_background_index]
+	
+	var color = float(self.curr_background_index)/self.backgrounds.size()
+	$CanvasLayer/Occluder.color = Color(0, 0, 0, color/2)
+	
 	$BackgroundChangeTimer.start(self.background_change_time)
+
+
+func _on_AudioStreamPlayer_finished():
+	$AudioStreamPlayer.play()

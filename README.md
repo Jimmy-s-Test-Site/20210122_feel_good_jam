@@ -1,6 +1,8 @@
 # Sky Fishing
 `codename feel_good_jam_20210122`
 
+![Splash Screen Banner](Feel%20Good%20Jam/Marketing/splash_screen_banner.png)
+
 ## Description
 
 As many before you, you depart your village to explore this world of which much is not known. You take Jimmy with you, he's not too happy about this, but he understands that it needs to be done.
@@ -33,3 +35,6 @@ Coding by Abdullah & Julian
 ## Concept Art
 
 ![Skyfish Sketches 1](Feel%20Good%20Jam/Marketing/skyfish_sketches_1.png)
+![Skyfish Sketches 2](Feel%20Good%20Jam/Marketing/skyfish_sketches_2.png)
+![Skyfish Sketches 3](Feel%20Good%20Jam/Marketing/skyfish_sketches_3.png)
+![Skyfish Sketches 4](Feel%20Good%20Jam/Marketing/skyfish_sketches_4.png)

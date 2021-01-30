@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/afternoon.ogg-a09f66caa2d8e987090df01592001621.oggstr"
+
+[deps]
+
+source_file="res://Art Folder/Audio/afternoon.ogg"
+dest_files=[ "res://.import/afternoon.ogg-a09f66caa2d8e987090df01592001621.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

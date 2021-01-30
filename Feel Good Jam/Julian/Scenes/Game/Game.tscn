@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Julian/Scenes/Game/Game.gd" type="Script" id=1]
 [ext_resource path="res://Julian/Biomes/Biome1.tres" type="Resource" id=2]
@@ -6,7 +6,9 @@
 [ext_resource path="res://Art Folder/Sprites/background1.png" type="Texture" id=4]
 [ext_resource path="res://Art Folder/Sprites/background2.png" type="Texture" id=5]
 [ext_resource path="res://Art Folder/Sprites/background3.png" type="Texture" id=6]
-[ext_resource path="res://Art Folder/Audio/music.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Art Folder/Audio/afternoon.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Art Folder/Audio/night.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Art Folder/Audio/morning.ogg" type="AudioStream" id=10]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
@@ -15,7 +17,8 @@ biomes = [ ExtResource( 2 ) ]
 init_biome = ExtResource( 2 )
 fish_spawn_time = 0.8
 backgrounds = [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ]
-background_change_time = 30.0
+soundtracks = [ ExtResource( 10 ), ExtResource( 8 ), ExtResource( 9 ) ]
+background_change_time = 60.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -54,7 +57,7 @@ __meta__ = {
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 7 )
+stream = ExtResource( 10 )
 autoplay = true
 
 [node name="FishSpawnTimer" type="Timer" parent="."]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/OG_Flying_Fish.png-6ad4af689e372f70a92dfac4126e3486.stex"
+path="res://.import/background2.png-1748b4495b3dd31a0d45934937061b8c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Folder/OG_Flying_Fish.png"
-dest_files=[ "res://.import/OG_Flying_Fish.png-6ad4af689e372f70a92dfac4126e3486.stex" ]
+source_file="res://Art Folder/Sprites/background2.png"
+dest_files=[ "res://.import/background2.png-1748b4495b3dd31a0d45934937061b8c.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Samurai_WalkStyle.png-786240dbd424d8c333a419e1bb5e7696.stex"
+path="res://.import/Samurai_CastingOut.png-b3ab8365bc1945f0781cdf9e1ff4a862.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Folder/Samurai_WalkStyle.png"
-dest_files=[ "res://.import/Samurai_WalkStyle.png-786240dbd424d8c333a419e1bb5e7696.stex" ]
+source_file="res://Art Folder/Sprites/Samurai_CastingOut.png"
+dest_files=[ "res://.import/Samurai_CastingOut.png-b3ab8365bc1945f0781cdf9e1ff4a862.stex" ]
 
 [params]
 

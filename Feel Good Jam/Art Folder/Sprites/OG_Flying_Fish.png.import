@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Samurai_Idle.png-2d37f67a2ce58d06b5e4bb0e61df6737.stex"
+path="res://.import/OG_Flying_Fish.png-b4a278466e40df6b2ad2edfe86b1eec8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Folder/Samurai_Idle.png"
-dest_files=[ "res://.import/Samurai_Idle.png-2d37f67a2ce58d06b5e4bb0e61df6737.stex" ]
+source_file="res://Art Folder/Sprites/OG_Flying_Fish.png"
+dest_files=[ "res://.import/OG_Flying_Fish.png-b4a278466e40df6b2ad2edfe86b1eec8.stex" ]
 
 [params]
 

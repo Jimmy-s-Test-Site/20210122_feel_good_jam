@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Baloonapus_sheet.png-0c405b952f94fd3114897b49849b11e0.stex"
+path="res://.import/Jellyfish_XP_sheet.png-6724449a02d77def44ec4189f140afae.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Folder/Baloonapus_sheet.png"
-dest_files=[ "res://.import/Baloonapus_sheet.png-0c405b952f94fd3114897b49849b11e0.stex" ]
+source_file="res://Art Folder/Sprites/Jellyfish_XP_sheet.png"
+dest_files=[ "res://.import/Jellyfish_XP_sheet.png-6724449a02d77def44ec4189f140afae.stex" ]
 
 [params]
 

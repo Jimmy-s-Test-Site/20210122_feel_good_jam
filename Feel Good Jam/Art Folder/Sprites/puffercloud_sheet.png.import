@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/background1.png-dadd3541529ad33d59987b146d0c57e8.stex"
+path="res://.import/puffercloud_sheet.png-d75478cea238e4e4887712e3544e02a1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Folder/background1.png"
-dest_files=[ "res://.import/background1.png-dadd3541529ad33d59987b146d0c57e8.stex" ]
+source_file="res://Art Folder/Sprites/puffercloud_sheet.png"
+dest_files=[ "res://.import/puffercloud_sheet.png-d75478cea238e4e4887712e3544e02a1.stex" ]
 
 [params]
 

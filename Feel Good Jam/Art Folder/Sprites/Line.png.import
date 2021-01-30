@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Birdapus_sheet.png-06b6cf5f2bd2f330c8283d58b22c69ec.stex"
+path="res://.import/Line.png-d411367aab3b0fed783aed9b6273b2b4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Folder/Birdapus_sheet.png"
-dest_files=[ "res://.import/Birdapus_sheet.png-06b6cf5f2bd2f330c8283d58b22c69ec.stex" ]
+source_file="res://Art Folder/Sprites/Line.png"
+dest_files=[ "res://.import/Line.png-d411367aab3b0fed783aed9b6273b2b4.stex" ]
 
 [params]
 

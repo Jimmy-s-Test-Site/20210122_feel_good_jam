@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hook_Blank.png-77a1dc42674bcf9ff70ed64d0ea33e19.stex"
+path="res://.import/whale_concept.png-c643de2f7c490c168e29c17d15678be1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Folder/Hook_Blank.png"
-dest_files=[ "res://.import/Hook_Blank.png-77a1dc42674bcf9ff70ed64d0ea33e19.stex" ]
+source_file="res://Art Folder/Sprites/whale_concept.png"
+dest_files=[ "res://.import/whale_concept.png-c643de2f7c490c168e29c17d15678be1.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Start Scree.png-229b4b1877b6e41fea6d5347f4e15ff3.stex"
+path="res://.import/Hook_Blank.png-fe4384261554b686654f58f869f9e30b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Folder/Start Scree.png"
-dest_files=[ "res://.import/Start Scree.png-229b4b1877b6e41fea6d5347f4e15ff3.stex" ]
+source_file="res://Art Folder/Sprites/Hook_Blank.png"
+dest_files=[ "res://.import/Hook_Blank.png-fe4384261554b686654f58f869f9e30b.stex" ]
 
 [params]
 

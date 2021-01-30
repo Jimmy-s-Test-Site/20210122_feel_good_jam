@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Jellyfish_XP_sheet.png-78934f0fd3a7117a9fbe5c3501d1a45d.stex"
+path="res://.import/Samurai_WalkStyle.png-fa9a737442e6c1531bdcbbf1425239a6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Folder/Jellyfish_XP_sheet.png"
-dest_files=[ "res://.import/Jellyfish_XP_sheet.png-78934f0fd3a7117a9fbe5c3501d1a45d.stex" ]
+source_file="res://Art Folder/Sprites/Samurai_WalkStyle.png"
+dest_files=[ "res://.import/Samurai_WalkStyle.png-fa9a737442e6c1531bdcbbf1425239a6.stex" ]
 
 [params]
 

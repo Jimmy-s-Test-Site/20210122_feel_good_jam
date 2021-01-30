@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/forgetful_fish_sheet.png-972edcccba3104de33bb641028e4c49a.stex"
+path="res://.import/Hook_Fish.png-b09bf2fa2fd06ca599128a65b92124a8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Folder/forgetful_fish_sheet.png"
-dest_files=[ "res://.import/forgetful_fish_sheet.png-972edcccba3104de33bb641028e4c49a.stex" ]
+source_file="res://Art Folder/Sprites/Hook_Fish.png"
+dest_files=[ "res://.import/Hook_Fish.png-b09bf2fa2fd06ca599128a65b92124a8.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/puffercloud_sheet.png-3774f34111f772569082d0bef03d358d.stex"
+path="res://.import/arrow_fish_sheet.png-67d56493081d4598d9e88d31a5368c1a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Folder/puffercloud_sheet.png"
-dest_files=[ "res://.import/puffercloud_sheet.png-3774f34111f772569082d0bef03d358d.stex" ]
+source_file="res://Art Folder/Sprites/arrow_fish_sheet.png"
+dest_files=[ "res://.import/arrow_fish_sheet.png-67d56493081d4598d9e88d31a5368c1a.stex" ]
 
 [params]
 

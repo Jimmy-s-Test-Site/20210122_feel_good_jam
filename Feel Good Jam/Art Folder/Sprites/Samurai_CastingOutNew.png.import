@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Droneapus_sheet.png-a4275174e2a259ec97176a6c4f27c396.stex"
+path="res://.import/Samurai_CastingOutNew.png-63a37e44d5415a0747b03120f2cbba68.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Folder/Droneapus_sheet.png"
-dest_files=[ "res://.import/Droneapus_sheet.png-a4275174e2a259ec97176a6c4f27c396.stex" ]
+source_file="res://Art Folder/Sprites/Samurai_CastingOutNew.png"
+dest_files=[ "res://.import/Samurai_CastingOutNew.png-63a37e44d5415a0747b03120f2cbba68.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ufo_sheet.png-10f9b99d09dc5911dc92f327b07f00ec.stex"
+path="res://.import/Droneapus_sheet.png-81d3e2a82ee9c1b7cbeb0445045d26ae.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Folder/ufo_sheet.png"
-dest_files=[ "res://.import/ufo_sheet.png-10f9b99d09dc5911dc92f327b07f00ec.stex" ]
+source_file="res://Art Folder/Sprites/Droneapus_sheet.png"
+dest_files=[ "res://.import/Droneapus_sheet.png-81d3e2a82ee9c1b7cbeb0445045d26ae.stex" ]
 
 [params]
 

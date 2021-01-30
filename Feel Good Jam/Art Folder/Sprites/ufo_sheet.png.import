@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Nado_Shark.png-876c215e0ececea35cf89d543b68a79b.stex"
+path="res://.import/ufo_sheet.png-5df107a61b0f59d1e020855ebbaf2830.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Folder/Nado_Shark.png"
-dest_files=[ "res://.import/Nado_Shark.png-876c215e0ececea35cf89d543b68a79b.stex" ]
+source_file="res://Art Folder/Sprites/ufo_sheet.png"
+dest_files=[ "res://.import/ufo_sheet.png-5df107a61b0f59d1e020855ebbaf2830.stex" ]
 
 [params]
 

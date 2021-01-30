@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://Abdullah Folder/Player Things/Player.gd" type="Script" id=1]
 [ext_resource path="res://Abdullah Folder/Player Things/Rod.gd" type="Script" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Art Folder/Sprites/Hook_Blank.png" type="Texture" id=11]
 [ext_resource path="res://Art Folder/Sprites/Samurai_CastingOutNew.png" type="Texture" id=12]
 [ext_resource path="res://Art Folder/Sprites/Samurai_Idle.png" type="Texture" id=13]
+[ext_resource path="res://Art Folder/Sprites/Hook_Fish.png" type="Texture" id=14]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 10.8616
@@ -1491,9 +1492,9 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -1.684 )
-texture = ExtResource( 12 )
-vframes = 5
-hframes = 5
+texture = ExtResource( 13 )
+vframes = 2
+hframes = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/CastingBack = SubResource( 2 )
@@ -1523,8 +1524,7 @@ parameters/Walking/blend_position = -0.00291121
 
 [node name="Rod" type="Node2D" parent="."]
 visible = false
-light_mask = 512
-position = Vector2( -44.119, 15.291 )
+position = Vector2( 47.5731, 14.916 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -1551,6 +1551,8 @@ position = Vector2( 0, 7.5 )
 collision_layer = 512
 collision_mask = 512
 script = ExtResource( 10 )
+fish_texture = ExtResource( 14 )
+no_fish_texture = ExtResource( 11 )
 
 [node name="Sprite" type="Sprite" parent="Rod/HookContainer/Hook"]
 position = Vector2( -2.78, 6.782 )
@@ -1565,17 +1567,18 @@ shape = SubResource( 42 )
 
 [node name="InventoryContainer" parent="." instance=ExtResource( 5 )]
 visible = false
-margin_left = -214.0
-margin_top = -316.0
-margin_right = -214.0
-margin_bottom = -316.0
+margin_left = -135.0
+margin_top = -194.0
+margin_right = -135.0
+margin_bottom = -194.0
+rect_scale = Vector2( 0.6, 0.6 )
 
 [node name="BaitPrompt" parent="." instance=ExtResource( 6 )]
 visible = false
-margin_left = -62.238
-margin_top = -200.003
-margin_right = 87.762
-margin_bottom = -155.003
+margin_left = -76.0
+margin_top = -140.0
+margin_right = 74.0
+margin_bottom = -95.0
 inventory = ExtResource( 4 )
 
 [node name="Idle_timer" type="Timer" parent="."]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Abdullah Folder/Inventory Things/Bait Prompt.gd" type="Script" id=1]
+[ext_resource path="res://Art Folder/Fonts/new_dynamicfont.tres" type="DynamicFont" id=2]
 
 [node name="BaitPrompt" type="ColorRect"]
 anchor_left = 0.5
@@ -18,8 +19,12 @@ __meta__ = {
 }
 
 [node name="Text" type="Label" parent="."]
-margin_left = 35.9594
-margin_right = 112.959
+margin_left = 22.5
+margin_top = 3.5
+margin_right = 121.5
+margin_bottom = 19.5
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 2 )
 text = "Use as bait?"
 align = 1
 __meta__ = {
@@ -31,6 +36,8 @@ margin_left = 29.5911
 margin_top = 24.1237
 margin_right = 63.5911
 margin_bottom = 44.1237
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 2 )
 text = "Yes"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -41,6 +48,8 @@ margin_left = 80.9286
 margin_top = 23.7194
 margin_right = 113.929
 margin_bottom = 43.7194
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 2 )
 text = "No"
 __meta__ = {
 "_edit_use_anchors_": false

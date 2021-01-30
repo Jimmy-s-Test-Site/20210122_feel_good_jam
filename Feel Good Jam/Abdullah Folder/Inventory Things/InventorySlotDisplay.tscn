@@ -3,7 +3,8 @@
 [ext_resource path="res://Abdullah Folder/Inventory Things/InventorySlotDisplay.gd" type="Script" id=1]
 [ext_resource path="res://Abdullah Folder/Inventory Things/Untitled.png" type="Texture" id=2]
 [ext_resource path="res://Abdullah Folder/Inventory Things/Inventory.tres" type="Resource" id=3]
-[ext_resource path="res://Art Folder/Sprites/MinimalPixelFont.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Art Folder/Fonts/MinimalPixelFont.tres" type="DynamicFont" id=4]
+
 
 
 [node name="InventorySlotDisplay" type="CenterContainer"]

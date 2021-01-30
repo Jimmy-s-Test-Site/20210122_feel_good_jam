@@ -44,6 +44,7 @@ func reel(direction): #direction should only be 0,1, or -1
 		if item is Item:
 			emit_signal("harvest", item.type)
 			has_fish = false
+			$HookContainer/Hook.remove_fish()
 
 
 func _on_Hook_caught_fish(item):

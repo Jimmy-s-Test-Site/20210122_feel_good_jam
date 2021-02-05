@@ -1,5 +1,6 @@
 # Sky Fishing
-`codename feel_good_jam_20210122`
+
+`codename: 20210122_feel_good_jam`
 
 `link:` https://jaacko-torus.itch.io/skyfishing
 
